@@ -1,8 +1,8 @@
 # Alpine Linux with OpenJDK JRE
-FROM openjdk:8-jre-alpine
+FROM openjdk:20
 
 # Copy war file
-COPY echo-0.0.1-SNAPSHOT.jar /echo.war
+COPY venom-api-0.0.1-SNAPSHOT.jar /venom-api.war
 
 # run the app
-CMD ["/usr/bin/java", "-jar", "/echo.war"]
+CMD ["/usr/bin/java", "-jar", "/venom-api.war"]
